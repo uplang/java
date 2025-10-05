@@ -20,6 +20,17 @@ public class Parser {
     }
 
     /**
+     * Parse UP document from a string (instance method).
+     *
+     * @param input the UP document as a string
+     * @return the parsed document
+     */
+    public Document parseString(String input) {
+        // Delegate to static method
+        return parse(input);
+    }
+
+    /**
      * Represents a parsed UP document.
      */
     public static class Document {
