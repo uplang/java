@@ -1,0 +1,55 @@
+# Example UP configuration file
+
+# Application settings
+name "My Application"
+version 1.0.0
+debug!bool true
+
+# Server configuration
+server {
+  host localhost
+  port!int 8080
+  timeout!dur 30s
+  ssl!bool false
+}
+
+# Database settings
+database {
+  primary {
+    host db1.example.com
+    port!int 5432
+    user postgres
+    pool_size!int 20
+  }
+  replica {
+    host db2.example.com
+    port!int 5432
+    user readonly
+    pool_size!int 10
+  }
+}
+
+# Feature flags
+features [
+  user-auth
+  api-v2
+  metrics
+]
+
+# Environments
+environments [
+  development
+  staging
+  production
+]
+
+# Description
+description ```
+This is a multiline description
+that can span multiple lines.
+No quotes needed!
+```
+
+# Tags
+tags [web, api, production]
+
