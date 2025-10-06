@@ -7,19 +7,19 @@ class ParserTest {
 
     @Test
     void testParseEmpty() {
-        Parser.Document doc = Parser.parse("");
+        Document doc = Parser.parse("");
         assertNotNull(doc);
     }
 
     @Test
     void testParseSimple() {
-        Parser.Document doc = Parser.parse("name John Doe");
+        Document doc = Parser.parse("name John Doe");
         assertNotNull(doc);
     }
 
     @Test
-    void testDocumentData() {
-        Parser.Document doc = Parser.parse("");
-        assertNotNull(doc.getData());
+    void testDocumentIsEmpty() {
+        Document doc = Parser.parse("");
+        assertTrue(doc.isEmpty());
     }
 }

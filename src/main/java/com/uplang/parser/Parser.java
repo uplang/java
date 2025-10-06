@@ -1,7 +1,6 @@
 package com.uplang.parser;
 
-import java.util.HashMap;
-import java.util.Map;
+import java.util.List;
 
 /**
  * UP (Unified Properties) parser for Java.
@@ -16,7 +15,7 @@ public class Parser {
      */
     public static Document parse(String input) {
         // Placeholder implementation
-        return new Document();
+        return Document.empty();
     }
 
     /**
@@ -28,16 +27,5 @@ public class Parser {
     public Document parseString(String input) {
         // Delegate to static method
         return parse(input);
-    }
-
-    /**
-     * Represents a parsed UP document.
-     */
-    public static class Document {
-        private final Map<String, Object> data = new HashMap<>();
-
-        public Map<String, Object> getData() {
-            return new HashMap<>(data);
-        }
     }
 }
