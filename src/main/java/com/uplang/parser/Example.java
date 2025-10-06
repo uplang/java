@@ -46,7 +46,7 @@ public class Example {
                 }
             });
 
-        } catch (ParseException e) {
+        } catch (Exception e) {
             System.err.println("Parse error: " + e.getMessage());
         }
 
@@ -94,7 +94,7 @@ public class Example {
                 });
             });
 
-        } catch (ParseException e) {
+        } catch (Exception e) {
             System.err.println("Parse error: " + e.getMessage());
         }
 
@@ -138,7 +138,7 @@ public class Example {
                 });
             });
 
-        } catch (ParseException e) {
+        } catch (Exception e) {
             System.err.println("Parse error: " + e.getMessage());
         }
 
@@ -177,7 +177,7 @@ public class Example {
                 System.out.println(node.key() + type + ": " + description);
             }
 
-        } catch (ParseException e) {
+        } catch (Exception e) {
             System.err.println("Parse error: " + e.getMessage());
         }
 
